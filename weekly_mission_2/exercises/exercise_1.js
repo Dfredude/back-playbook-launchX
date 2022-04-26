@@ -19,3 +19,33 @@ const repo = {
    console.log("Issues totales: " + repo.getTotalIssues())
    console.log(repo.getGeneralInfo())
    
+const issue = {
+  title: "Error",
+  repositoryNameAssociated:  "LaunchX",
+  status: "OK",
+  numberOfComments: 4,
+  labels: "nice",
+  author: "dfredude",
+  dateCreated: "25-04-2022",
+  lastUpdated: "25-04-2022",
+  getTitleAndAuthor() {
+    return [this.title, this.author]
+  },
+  getGeneralInfo() {
+    return this.status
+  }
+}
+
+const pullRequest = {
+  title: "random",
+  branchName: "info",
+  dateCreated: "info",
+  status: "info",
+  repositoryNameAssociated: "info",
+  getStatus() {
+    return this.status
+  },
+  getTitleAndAuthor(){
+    return [this.title, this.author]
+  }
+}
