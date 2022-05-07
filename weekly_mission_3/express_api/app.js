@@ -22,6 +22,27 @@ app.get('/v1/explorers/:id', (req, res)=> {
 
 })
 
+app.post('/v1/explorers', (req, res)=> {
+    console.log(`API Explorers POST request ${new Date()}`);
+    const requestBody = req.body
+    res.status(201).json({ message: "Created"})
+})
+
+app.put('/v1/explorers/:id', (req, res)=> {
+    console.log(`API Explorers PUT request ${new Date()}`);
+    console.log(`Updating explorer ${req.params.id}`);
+    const requestBody = req.body
+    res.status(201).json({ message: "Updated!"})
+})
+
+app.delete('/v1/explorers/:id', (req, res)=> {
+    console.log(`API Explorers DELETE request ${new Date()}`);
+    console.log(`Deleting explorer ${req.params.id}`);
+    const requestBody = req.body
+    res.status(200).json({ message: "Deleted!"})
+})
+
 app.listen(port, ()=> {
     console.log(`Example app listening on port ${port}`)
 })
+
