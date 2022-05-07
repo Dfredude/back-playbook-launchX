@@ -23,5 +23,6 @@ describe("Tests for UserView", ()=> {
         expect(user.name).toBe("Fred")
         expect(user.id).toBe(984)
         expect(user.username).toBe("fredude")
+        expect(user.getBio).toBe("Hey")
      })
 })
