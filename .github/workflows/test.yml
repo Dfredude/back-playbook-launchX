@@ -14,4 +14,4 @@ jobs:
     - name: Run Jest
       run: | 
         cd weekly_mission_4/refactoring
-        stefanoeb/jest-action@1.0.3
+        node node_modules/jest/bin/jest
