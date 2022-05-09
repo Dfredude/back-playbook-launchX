@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: change environment
-      run:  cd weekly_mission_4/
+      run:  cd weekly_mission_4/refactoring/
     - name: display dir
       run: ls -all
     - name: Run Jest
