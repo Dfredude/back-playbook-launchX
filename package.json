@@ -1,0 +1,19 @@
+{
+  "name": "back-playbook-launchx",
+  "version": "1.0.0",
+  "description": "All projects for launchx back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "node weekly_mission_4/refactoring/node_modules/jest/bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dfredude/back-playbook-launchX.git"
+  },
+  "author": "Alfredo Dominguez Lucio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dfredude/back-playbook-launchX/issues"
+  },
+  "homepage": "https://github.com/Dfredude/back-playbook-launchX#readme"
+}
