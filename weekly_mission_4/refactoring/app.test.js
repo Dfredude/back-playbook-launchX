@@ -328,7 +328,7 @@ describe("Test for app", ()=> {
               "reasonML",
               "elm"
             ],
-            "trick": 1
+           
           })
      })
 })
