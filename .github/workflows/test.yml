@@ -8,6 +8,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: change environment
+      run:  cd weekly_mission_4/
+    - name: display dir
       run: ls -all
     - name: Run Jest
       uses: stefanoeb/jest-action@1.0.3
