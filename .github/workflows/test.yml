@@ -6,6 +6,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
+    - name: Install modules
+      run: |
+        cd weekly_mission_4/refactoring
+        npm install
     - name: Run Jest
-      uses: stefanoeb/jest-action@1.0.3
+      run: | 
+        cd weekly_mission_4/refactoring
+        stefanoeb/jest-action@1.0.3
