@@ -1,4 +1,5 @@
 const ExplorerService = require("../services/ExplorerService")
+const FizzBuzzService = require("../services/FizzBuzzService")
 // const FizzBuzzService = require("../services/FizzBuzzService")
 
 module.exports = class ExplorerController{
@@ -12,5 +13,9 @@ module.exports = class ExplorerController{
 
     static getExplorersUsernamesByMission(mission){
         return ExplorerService.getExplorersUsernamesByMission(mission)
+    }
+
+    static applyValidationInNumber(number){
+        return FizzBuzzService.applyValidationInNumber(number)
     }
 }

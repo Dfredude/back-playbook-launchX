@@ -316,19 +316,11 @@ describe("Test for app", ()=> {
             "ajolonauta15"
         ])
     })
-    test("4) FizzBuzzService | applyValidationInExplorer method", ()=> {
-        const updatedExplorer = FizzBuzzService.applyValidationInExplorer(data[0])
-        expect(updatedExplorer).toEqual({
-            "name": "Woopa1",
-            "githubUsername": "ajolonauta1",
-            "score": 1,
-            "mission": "node",
-            "stacks": [
-                "javascript",
-                "reasonML",
-                "elm"
-            ],
-            "trick": 1
-        })
+    test("4) FizzBuzzService | applyValidationInNumber method", ()=> {
+        const test_data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+        const expected_data = [1, 2, "FIZZ", 4, "BUZZ", "FIZZ", 7, 8, "FIZZ", "BUZZ", 11, "FIZZ", 13, 14, "FIZZBUZZ"]
+        for (let i = 0; i<test_data.length; i++){
+            expect(FizzBuzzService.applyValidationInNumber(test_data[i])).toBe(expected_data[i])
+        }
     })
 })

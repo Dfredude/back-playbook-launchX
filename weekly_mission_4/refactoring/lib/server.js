@@ -28,6 +28,12 @@ app.get("/v1/explorers/usernames/:mission", (req, res) => {
     
 })
 
+app.get("/v1/fizzbuzz/:number", (req, res)=>{
+    const FizzBuzzService = require("./services/FizzBuzzService")
+    const num = req.params.number
+    res.send(FizzBuzzService.applyValidationInNumber(num))
+})
+
 app.listen(port, ()=>{
     console.log(`Listening on port ${port}`);
 })

@@ -1,14 +1,16 @@
 module.exports = class FizzBuzzService{
-    static applyValidationInExplorer(explorer){
-        if(explorer.score%3 === 0 && explorer.score%5 === 0){
-            explorer.trick = "FIZZBUZZ"
-        } else if (explorer.score%3===0){
-            explorer.trick = "FIZZ"
-        } else if(explorer.score%5 ===0){
-            explorer.trick = "BUZZ"
+    static applyValidationInNumber(score){
+        let result
+        if(score%3 === 0 && score %5 === 0){
+            result = "FIZZBUZZ"
+        } else if (score %3===0){
+            result = "FIZZ"
+        } else if(score %5 ===0){
+            result = "BUZZ"
         }else{
-            explorer.trick = explorer.score
+            result = score 
         }
-        return explorer
+        console.log(result);
+        return result
     }
 }
