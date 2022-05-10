@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node node_modules/jest/bin/jest",
     "linter": "node node_modules/eslint/bin/eslint .",
-    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
+    "linter-fix": "node ./node_modules/eslint/bin/eslint . --fix",
+    "server": "node lib/server"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,8 @@
   "devDependencies": {
     "eslint": "^8.15.0",
     "jest": "^28.1.0"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
   }
 }

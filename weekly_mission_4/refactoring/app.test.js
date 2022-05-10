@@ -301,8 +301,8 @@ describe("Test for app", ()=> {
             }])
     })
 
-    test("3) ExplorerService | getExplorersUsernamesByMission method", ()=> {
-        const explorersInNodeNames = ExplorerService.getExplorersUsernamesByMission(data, "node")
+    test("3) ExplorerService | filterExplorersUsernamesByMission method", ()=> {
+        const explorersInNodeNames = ExplorerService.filterExplorersUsernamesByMission(data, "node")
         expect(explorersInNodeNames).toEqual([
             "ajolonauta1",
             "ajolonauta2",

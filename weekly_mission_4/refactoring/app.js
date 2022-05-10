@@ -14,7 +14,7 @@ const explorersInNode = ExplorerService.filterByMission(explorers, "node")
 //console.log(explorersInNode.length)
 
 // Part4: Get the explorer's usernames in Node
-const usernamesInNode = ExplorerService.getExplorersUsernamesByMission(explorers, "node")
+const usernamesInNode = ExplorerService.filterExplorersUsernamesByMission(explorers, "node")
 
 // DEAD CODE: Part 5,6,7, please remove this and go to Part 8!
 
