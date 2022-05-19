@@ -1,19 +1,21 @@
 const { PrismaClient } = require('@prisma/client')
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
 (async function main() {
     try {
-        const woopa4 = await prisma.explorer.upsert({
-            where: { name: 'Woopa 4'},
+        const woopa4 = await prisma.register.upsert({
+            where: { name: 'MyRegister'},
             update: {},
             create: {
-                name: 'Woopa 4',
-                username: 'ajolonauta4',
-                mission: 'Python'
+                name: 'MyRegister',
+                lang: "Spanish",
+                missionCommander: "Somebody",
+                enrollments: 8,
+                hasCertification: true
             }
-        })
+        });
 
-        console.log('Create 1 explorer');
+        console.log('Create 1 register');
     } catch(e){
         console.error(e)
         process.exit(1)
