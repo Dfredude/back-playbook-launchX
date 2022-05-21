@@ -106,6 +106,49 @@ app.delete('/registers/:id', async (req, res) => {
     return res.json({message: "Eliminado correctamente"})
 })
 
+//Commanders start here
+
+app.get('/commanders', async (req, res)=>{
+    const allCommanders = await prisma.missionCommander.findMany({})
+    res.json(allCommanders)
+})
+
+app.get('/commanders/:id', async (req, res)=> {
+    const id = req.params.id
+    const commander = await prisma.missionCommander.findUnique({where: {id: parseInt(id)}})
+    res.json(commander)
+})
+
+app.post('/commanders', async (req, res) => {
+    const commander = {
+        name: req.body.name,
+        username: req.body.username,
+        mainStack: req.body.mainStack
+    }
+    const message = "Commander creado!"
+    await prisma.missionCommander.create({data: commander})
+    return res.json({message})
+})
+
+app.put('/commanders/:id', async (req, res) => {
+    const id = parseInt(req.params.id)
+    await prisma.missionCommander.update({
+        where: {
+            id: id
+        },
+        data: {
+            mainStack: req.body.mainStack
+        }
+    })
+    return res.json({ message: "Actualizado Correctamente"})
+})
+
+app.delete('/commanders/:id', async (req, res) => {
+    const id = parseInt(req.params.id)
+    await prisma.missionCommander.delete({where: {id: id}})
+    return res.json({message: "Eliminado correctamente"})
+})
+
 app.listen(port, ()=> {
     console.log(`Listening to requests on port ${port}`);
 })

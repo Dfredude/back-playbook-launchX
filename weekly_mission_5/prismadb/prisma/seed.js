@@ -3,15 +3,14 @@ const prisma = new PrismaClient();
 
 (async function main() {
     try {
-        const woopa4 = await prisma.register.upsert({
-            where: { name: 'MyRegister'},
+        await prisma.missionCommander.upsert({
+            where: { name: 'Roberto'},
             update: {},
             create: {
-                name: 'MyRegister',
-                lang: "Spanish",
-                missionCommander: "Somebody",
-                enrollments: 8,
-                hasCertification: true
+                name: 'Roberto',
+                username: "master",
+                mainStack: "MERN",
+                currentEnrollment: true,
             }
         });
 
